@@ -1,14 +1,15 @@
-import React from 'react';
-import './App.css';
-import SearchForm from './components/SearchForm'
+import React from "react";
+import "./App.css";
+import SearchForm from "./components/SearchForm";
+import Nav from "./components/Nav";
 
 function App() {
-
   return (
-    <div className="App">
-      <h1>Brewbuds App</h1>
+    <div className= 'App'>
+      <nav class="nav">
+        <Nav />
+      </nav>
       <SearchForm />
-      
     </div>
   );
 }
