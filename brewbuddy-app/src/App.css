@@ -4,8 +4,20 @@
 .nav {
   display: flex;
   justify-content: center;
+  list-style: none;
+  background-color: grey;
   
 }
+
+  
+  
+
+
+
+.paragraph {
+  font-size: 50px;
+}
+
 
 
 

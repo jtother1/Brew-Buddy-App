@@ -1,17 +1,25 @@
-import React from "react";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
-
-function Nav() {
-  return (
-   <nav>
-       <h1>Brew Buddy</h1>
-       <ul>
-           <li><a href="#">Home</a></li>
-           <li><a href="#">My List</a></li>
-           <li><a href="#">About</a></li>
-       </ul>
-   </nav>
-  );
+class Nav extends Component {
+  render() {
+    return (
+      <nav className="navBar">
+        <h1>Brew Buddy</h1>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/mylist">My list</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+        </ul>
+      </nav>
+    );
+  }
 }
 
 export default Nav;
