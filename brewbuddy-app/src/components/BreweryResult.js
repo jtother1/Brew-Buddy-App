@@ -1,22 +1,18 @@
 import React, { Component } from "react";
 
 class BreweryResult extends Component {
-    state = {
-        saved: true,
-        unSaved: false,
-    }
-    checkhandler() {
-        console.log(this.props.brewery.id);
-    }
   render() {
+    const { brewery, saved, toggleSave } = this.props;
     return (
       <div>
-        <h3>{this.props.brewery.name}</h3>
-        <p>Brewery Type: {this.props.brewery.brewery_type}</p>
-    <p>{this.props.brewery.city}, {this.props.brewery.state}</p>
-    <p>{this.props.brewery.street}</p>
-    <p>{this.props.brewery.website_url}</p>
-        <input onChange={this.checkhandler.bind(this)} type="checkbox" Checked={this.state.saved} unchecked={this.state.unSaved}/>
+        <h3>{brewery.name}</h3>
+        <p>Brewery Type: {brewery.brewery_type}</p>
+        <p>
+          {brewery.city}, {brewery.state}
+        </p>
+        <p>{brewery.street}</p>
+        <p>{brewery.website_url}</p>
+        <input onChange={toggleSave} type="checkbox" checked={saved} />
       </div>
     );
   }

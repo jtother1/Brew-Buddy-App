@@ -74,7 +74,9 @@ toggleSave(brewery) {
             </Route>
 
             <Route path="/results">
-              <Results />
+              <Results 
+              savedBreweries={savedBreweries}
+              toggleSave={this.toggleSave.bind(this)}/>
             </Route>
           </Switch>
         </Router>
