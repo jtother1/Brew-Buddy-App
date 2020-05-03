@@ -1,13 +1,48 @@
-.App {
+* {
+  /* background-image: url(./images/Beerbubbles.jpg);
+  background-position: 0%; */
   text-align: center;
-}
-.nav {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  background-color: grey;
+  font-family: Luckiest Guy;
+  font-size: 30px;
+  
   
 }
+
+.App {
+  
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(192, 114, 80);
+  
+  
+}
+img{
+  height: 400px;
+}
+h2 {
+  font-size: 60px;
+  font-family: sans-serif;
+}
+
+.home p {
+  height: 50%;
+}
+
+
+
+
+.nav.nav {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  
+  
+  list-style: none;
+  background-color: rgb(255, 254, 254);
+  
+}
+
 
   
   
@@ -18,14 +53,6 @@
   font-size: 50px;
 }
 
-
-
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
@@ -38,8 +65,5 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
 

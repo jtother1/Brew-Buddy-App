@@ -14,32 +14,42 @@ import MyList from "./pages/MyList";
 import Home from "./pages/Home";
 import Results from "./pages/Results";
 
-const BrewURL = "https://api.openbrewerydb.org/breweries";
-
 class App extends React.Component {
   state = {
-    name: " ",
-    brewery_type: " ",
-    city: " ",
-    state: " ",
-    breweries: [],
+    savedBreweries: [],
   };
-  componentDidMount() {
-    // const brewery = this.props.match.params.id.name;
-    const url = `${BrewURL}/`;
-
-    fetch(url)
-      .then((response) => response.json())
-      .then((breweries) => {
-        // let newBrewery = response.bpi[name];
-        console.log(breweries);
-        this.setState({ breweries: breweries });
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+//want a function to run when the app starts
+componentDidMount() {
+  //check local storage for saved breweries
+  const localStorageBreweries = localStorage.getItem('breweries')
+  if (localStorageBreweries){
+    //turns local storage breweries back into an array
+    const savedBreweries = JSON.parse(localStorageBreweries)
+    this.setState({savedBreweries})
   }
+
+}
+toggleSave(brewery) {
+  const savedBreweriesIds = this.state.savedBreweries.map(brew => {
+    return brew.id
+  }) 
+  if (savedBreweriesIds.includes(brewery.id)) {
+    const filteredBreweries = this.state.savedBreweries.filter(brew => {
+      return brew.id !== brewery.id
+      
+    })
+    this.setState({savedBreweries: filteredBreweries})
+    localStorage.setItem('breweries', JSON.stringify(filteredBreweries))
+
+  } else {
+    const breweries = [...this.state.savedBreweries,brewery]
+    this.setState({savedBreweries: breweries})
+    localStorage.setItem('breweries', JSON.stringify(breweries))
+  }
+}
   render() {
+    const { savedBreweries } = this.state;
+    
     return (
       <div className="App">
         <Router>
@@ -47,12 +57,25 @@ class App extends React.Component {
             <Nav />
           </nav>
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/">
+              <Home 
+              savedBreweries={savedBreweries}
+              toggleSave={this.toggleSave.bind(this)}/>
+            </Route>
 
-            <Route path="/about" component={About} />
+            <Route path="/about">
+              <About />
+            </Route>
 
-            <Route path="/mylist" component={MyList} />
-            <Route path="/results" component={Results}/>
+            <Route path="/mylist">
+              <MyList 
+              savedBreweries={savedBreweries}
+              toggleSave={this.toggleSave.bind(this)}/>
+            </Route>
+
+            <Route path="/results">
+              <Results />
+            </Route>
           </Switch>
         </Router>
       </div>

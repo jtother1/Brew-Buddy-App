@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 class Nav extends Component {
   render() {
     return (
-      <nav className="navBar">
-        <h1>Brew Buddy</h1>
+      <nav>
+        <h2>Brew Buddy</h2>
         <ul>
           <li>
             <Link to="/">Home</Link>
