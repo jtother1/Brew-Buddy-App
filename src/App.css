@@ -6,6 +6,7 @@
   font-size: 30px;
   
   
+  
 }
 
 .App {
@@ -16,32 +17,40 @@
   background-color: rgb(192, 114, 80);
   
   
+  
 }
+a {
+  text-decoration: none;
+  color:black;
+  
+}
+ul li{
+  display: inline;
+  padding: 20px;
+  list-style: none;
+  text-decoration: none;
+}
+
 img{
   height: 400px;
 }
 h2 {
   font-size: 60px;
-  font-family: sans-serif;
-}
-
-.home p {
-  height: 50%;
-}
-
-
-
-
-.nav.nav {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
   
   
-  list-style: none;
-  background-color: rgb(255, 254, 254);
-  
 }
+@media screen and (max-width: 800px) {
+  .paragraph {
+    font-size: 30px;
+  }
+
+}
+
+
+
+
+
+
 
 
   
@@ -50,6 +59,11 @@ h2 {
 
 
 .paragraph {
+  font-size: 30px;
+
+  
+}
+.about{
   font-size: 50px;
 }
 
@@ -64,6 +78,13 @@ h2 {
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.image {
+  height: 300px;
+}
+button {
+  font-size: 30px;
+  
 
+}
 
 

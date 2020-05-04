@@ -3,16 +3,15 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  Link,
-  Redirect,
 } from "react-router-dom";
 import "./App.css";
-import SearchForm from "./components/SearchForm";
 import Nav from "./components/Nav";
 import About from "./pages/About";
 import MyList from "./pages/MyList";
 import Home from "./pages/Home";
 import Results from "./pages/Results";
+import logo from ''
+
 
 class App extends React.Component {
   state = {

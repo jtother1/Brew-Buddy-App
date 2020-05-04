@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
+
 class Nav extends Component {
   render() {
     return (
-      <nav>
-        <h2>Brew Buddy</h2>
+      <nav className="container">
+        <h2>Brew-Buddy</h2>
         <ul>
           <li>
             <Link to="/">Home</Link>

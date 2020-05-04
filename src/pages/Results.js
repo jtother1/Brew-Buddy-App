@@ -48,7 +48,7 @@ export default function Results({ savedBreweries, toggleSave }) {
   }, []);
 
   // custom useHistory hook from react-router-dom
-  // we can use this to "listen" for the url to change
+  // can use this to "listen" for the url to change
   const history = useHistory();
 
   // Run the initializeState code whenever the URL changes
