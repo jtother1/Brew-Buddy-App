@@ -10,7 +10,7 @@ import About from "./pages/About";
 import MyList from "./pages/MyList";
 import Home from "./pages/Home";
 import Results from "./pages/Results";
-import logo from ''
+
 
 
 class App extends React.Component {

@@ -12,7 +12,7 @@ class Home extends Component {
           next time you want to explore a new brew you will have a plan.
         </p>
         <SearchForm />
-      <img src="https://media.giphy.com/media/3o85xjSETVG3OpPyx2/giphy.gif"></img>
+      <img src="https://media.giphy.com/media/3o85xjSETVG3OpPyx2/giphy.gif" alt=""></img>
       </div>
     );
   }

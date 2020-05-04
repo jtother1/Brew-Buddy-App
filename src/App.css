@@ -7,7 +7,9 @@
   
   
   
+  
 }
+
 
 .App {
   
@@ -15,6 +17,8 @@
   justify-content: center;
   flex-direction: column;
   background-color: rgb(192, 114, 80);
+  border: 8px solid black;
+  
   
   
   
@@ -39,12 +43,7 @@ h2 {
   
   
 }
-@media screen and (max-width: 800px) {
-  .paragraph {
-    font-size: 30px;
-  }
 
-}
 
 
 
@@ -84,6 +83,15 @@ h2 {
 button {
   font-size: 30px;
   
+
+}
+.results-container{
+  border: 8px solid black;
+}
+@media screen and (max-width: 800px) {
+  .paragraph {
+    font-size: 30px;
+  }
 
 }
 

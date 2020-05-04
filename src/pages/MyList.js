@@ -6,7 +6,7 @@ export default class MyList extends React.Component {
     const { savedBreweries, toggleSave } = this.props;
     return (
       <div>
-        <h3>My List</h3>
+        <h2>My List</h2>
         <div className="results-container">
           {savedBreweries.map((brew) => {
             return <BreweryResult key={brew.id} saved={true} brewery={brew} toggleSave={() => toggleSave(brew)}/>;
