@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 
 class Nav extends Component {
+  //used Link to make them functional
   render() {
     return (
       <nav className="container">

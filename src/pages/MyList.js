@@ -8,8 +8,8 @@ export default class MyList extends React.Component {
       <div>
         <h2>My List</h2>
         <div className="results-container">
-          {savedBreweries.map((brew) => {
-            return <BreweryResult key={brew.id} saved={true} brewery={brew} toggleSave={() => toggleSave(brew)}/>;
+          {savedBreweries.map((brew) => {//maps through the checked and unchecked to see if they are saved('true') then adds them to my list
+            return <BreweryResult key={brew.id} saved={true} brewery={brew} toggleSave={() => toggleSave(brew)}/>;//toggle on check or uncheck box
           })}
         </div>
       </div>

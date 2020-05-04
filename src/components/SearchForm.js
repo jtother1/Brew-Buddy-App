@@ -16,6 +16,7 @@ class SearchForm extends React.Component {
   render() {
     if (this.state.goToResults) {
       return (
+        //this will always be the default url...and this is how brewerydb uses it
         <Redirect
           to={`/results?query=${this.state.searchString}&per_page=20&page=1`}
         />
@@ -24,7 +25,7 @@ class SearchForm extends React.Component {
     return (
       <form className="form-horizontal">
         <input
-          placeholder=""
+          placeholder="" //search area where you type
           type="text"
           onChange={this.handleInput.bind(this)}
           value={this.state.searchString}
@@ -37,7 +38,7 @@ class SearchForm extends React.Component {
         </button>
         <p>{this.state.searchString}</p>
         <ul>
-          {this.state.searchSuggestions.map((suggestion) => {
+          {this.state.searchSuggestions.map((suggestion) => {//gets the info for search
             return <li key={suggestion.id}>{suggestion.name}</li>;
           })}
         </ul>

@@ -8,10 +8,10 @@ import { useHistory, Link } from "react-router-dom";
 export default function Results({ savedBreweries, toggleSave }) {
   // Set up two items in state
 
-  // breweries array, and the function to set it
+  // breweries array and the function to set it
   const [breweries, setBreweries] = useState([]);
 
-  // page number, and the function to set it
+  // page number and the function to set it
   const [pageNumber, setPageNumber] = useState(1);
 
   // search term
@@ -40,15 +40,15 @@ export default function Results({ savedBreweries, toggleSave }) {
     fetchBreweries();
   }
 
-  // useEffect: Hook from react, runs once when component loads, then whenever a dependency changes
-  //useEffect(/* function to run */ , /* array of dependencies */)
+  // useEffect- Hook from react, runs once when component loads, then whenever a dependency changes
+  //useEffect- function to run...array of dependencies 
   // This runs once when the page loads
   useEffect(() => {
     initializeState();
   }, []);
 
-  // custom useHistory hook from react-router-dom
-  // we can use this to "listen" for the url to change
+  // useHistory hook from react-router-dom
+  // we can use this to listen for the url to change
   const history = useHistory();
 
   // Run the initializeState code whenever the URL changes
@@ -71,24 +71,24 @@ export default function Results({ savedBreweries, toggleSave }) {
               key={brew.id}
               brewery={brew}
               saved={isSaved}
-              toggleSave={() => toggleSave(brew)}
+              toggleSave={() => toggleSave(brew)}//toggle save function
             />
           );
         })}
       </div>
-      {pageNumber > 1 ? (
+      {pageNumber > 1 ? (//creates page one
         <Link
           to={`/results?query=${searchTerm}&per_page=20&page=${pageNumber - 1}`}
         >
           last
-        </Link>
+        </Link>//null just means there are no pages before page one 
       ) : null}
       {pageNumber}
       <Link
-        to={`/results?query=${searchTerm}&per_page=20&page=${pageNumber + 1}`}
+        to={`/results?query=${searchTerm}&per_page=20&page=${pageNumber + 1}`}//if number of pages (20 per page) are greater than one add a page number and display the next 20 to be available
       >
-        next
+        next 
       </Link>
-    </div>
+    </div>//next page link...
   );
 }

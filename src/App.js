@@ -37,6 +37,7 @@ toggleSave(brewery) {
       return brew.id !== brewery.id
       
     })
+    //puts items in storage/my list
     this.setState({savedBreweries: filteredBreweries})
     localStorage.setItem('breweries', JSON.stringify(filteredBreweries))
 
