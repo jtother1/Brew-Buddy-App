@@ -2,12 +2,7 @@
   text-align: center;
   font-family: Luckiest Guy;
   font-size: 30px;
-  
-  
-  
-  
 }
-
 
 .App {
   
@@ -16,10 +11,6 @@
   flex-direction: column;
   background-color: rgb(192, 114, 80);
   border: 8px solid black;
-  
-  
-  
-  
 }
 a {
   text-decoration: none;
@@ -39,25 +30,6 @@ img{
 h2 {
   font-size: 60px;
   
-  
-}
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-
-.paragraph {
-  font-size: 30px;
-
   
 }
 .about{
