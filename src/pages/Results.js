@@ -92,3 +92,5 @@ export default function Results({ savedBreweries, toggleSave }) {
     </div>//next page link...
   );
 }
+
+export default Results;
