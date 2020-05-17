@@ -17,9 +17,12 @@ class SearchForm extends React.Component {
     if (this.state.goToResults) {
       return (
         //this will always be the default url...and this is how brewerydb uses it
-        <Redirect
-          to={`/results?query=${this.state.searchString}&per_page=20&page=1`}
-        />
+        <div>
+          <p>redirecting</p>
+          <Redirect
+            to={`/results?query=${this.state.searchString}&per_page=20&page=1`}
+          />
+        </div>
       );
     }
     return (
@@ -38,7 +41,8 @@ class SearchForm extends React.Component {
         </button>
         <p>{this.state.searchString}</p>
         <ul>
-          {this.state.searchSuggestions.map((suggestion) => {//gets the info for search
+          {this.state.searchSuggestions.map((suggestion) => {
+            //gets the info for search
             return <li key={suggestion.id}>{suggestion.name}</li>;
           })}
         </ul>
