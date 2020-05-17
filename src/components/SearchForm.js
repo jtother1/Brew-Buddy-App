@@ -14,19 +14,13 @@ class SearchForm extends React.Component {
   }
 
   render() {
-    if (this.state.goToResults) {
-      return (
-        //this will always be the default url...and this is how brewerydb uses it
-        <div>
-          <p>redirecting</p>
+    return (
+      <form className="form-horizontal">
+        {this.state.goToResults ? (
           <Redirect
             to={`/results?query=${this.state.searchString}&per_page=20&page=1`}
           />
-        </div>
-      );
-    }
-    return (
-      <form className="form-horizontal">
+        ) : null}
         <input
           placeholder="" //search area where you type
           type="text"
